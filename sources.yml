@@ -1,0 +1,119 @@
+# Edit this file to change what goes into your feed. No coding needed.
+#
+# mode: all      -> keep every recent item (use for sources that are already on-topic)
+# mode: keyword  -> keep only items whose title/summary match include_keywords
+# require_any    -> (optional) item must ALSO contain one of these words
+
+settings:
+  title: "Ethical Man: Curated"
+  description: "Vegan and ethics-minded men's lifestyle, fitness, style and gear, collected automatically."
+  # After you create the repo, fill these in (replace USER and REPO):
+  site_url: "https://github.com/USER/REPO"
+  feed_url: "https://USER.github.io/REPO/feed.xml"
+  max_items: 150
+  max_age_days: 21
+  include_keywords:
+    - vegan
+    - veganism
+    - plant-based
+    - plant based
+    - cruelty-free
+    - cruelty free
+    - animal-free
+    - animal free
+    - leather-free
+    - vegan leather
+    - ethical
+    - sustainable
+    - sustainability
+    - slow fashion
+    - buy less
+  exclude_keywords:
+    - recipe
+    - recipes
+    - giveaway
+    - coupon
+    - discount code
+    - "% off"
+    - black friday
+    - horoscope
+
+sources:
+  # ---- Already on-topic: keep everything ----
+  - name: Plant Based News
+    url: https://plantbasednews.org/feed/
+    mode: all
+  - name: Vegan Food & Living
+    url: https://www.veganfoodandliving.com/feed/
+    mode: all
+  - name: NutritionFacts
+    url: https://nutritionfacts.org/feed/
+    mode: all
+
+  # ---- Ethical-fashion sites that mix men's and women's: men only ----
+  - name: Good On You
+    url: https://goodonyou.eco/feed/
+    mode: all
+    require_any: [men, mens, "men's", menswear, male, guys]
+  - name: Eco-Stylist
+    url: https://www.eco-stylist.com/feed/
+    mode: all
+    require_any: [men, mens, "men's", menswear, male, guys]
+
+  # ---- Quality-and-longevity menswear: only when they touch ethics/vegan ----
+  - name: Permanent Style
+    url: https://www.permanentstyle.com/feed
+    mode: keyword
+  - name: Put This On
+    url: https://putthison.com/feed
+    mode: keyword
+  - name: Heddels
+    url: https://www.heddels.com/feed/
+    mode: keyword
+
+  # ---- Search-based feeds: this is how GQ, Esquire etc. get included ----
+  # Google News search turns "anything these magazines publish about X" into a feed.
+  - name: GQ
+    google_news: "site:gq.com vegan OR plant-based OR cruelty-free OR sustainable"
+    mode: keyword
+  - name: Esquire
+    google_news: "site:esquire.com vegan OR plant-based OR cruelty-free OR sustainable"
+    mode: keyword
+  - name: Men's Health
+    google_news: "site:menshealth.com vegan OR plant-based athlete"
+    mode: keyword
+  - name: Men's Journal
+    google_news: "site:mensjournal.com vegan OR plant-based"
+    mode: keyword
+  - name: News: vegan menswear
+    google_news: "vegan menswear OR \"vegan leather\" men OR cruelty-free menswear"
+    mode: keyword
+  - name: News: vegan athletes
+    google_news: "vegan athlete OR plant-based athlete OR vegan bodybuilder OR vegan strongman"
+    mode: keyword
+  - name: News: men's grooming
+    google_news: "vegan men's grooming OR cruelty-free men's skincare"
+    mode: keyword
+
+  # ---- Reddit (may be blocked from GitHub's servers; harmless if it fails) ----
+  - name: r/veganfitness (top of week)
+    url: https://www.reddit.com/r/veganfitness/top/.rss?t=week
+    mode: all
+
+  # ---- YouTube: use the @handle from the channel's URL. Add your own. ----
+  - name: Mic the Vegan (YouTube)
+    youtube: "@MictheVegan"
+    mode: all
+  - name: Rich Roll (YouTube)
+    youtube: "@richroll"
+    mode: all
+  - name: Nimai Delgado (YouTube)
+    youtube: "@NimaiDelgado"
+    mode: all
+
+  # ---- Pinterest: only works for specific users/boards you choose. ----
+  # Pinterest has no search feed. To follow a board, uncomment and edit:
+  #   "username/board-name" for a board, or just "username" for all their pins.
+  # - name: Pinterest board
+  #   pinterest: "username/board-name"
+  #   mode: all
