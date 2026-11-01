@@ -9,7 +9,7 @@ settings:
   description: "Vegan and ethics-minded men's lifestyle, fitness, style and gear, collected automatically."
   # After you create the repo, fill these in (replace USER and REPO):
   site_url: "https://github.com/veganfortheanimals/vegan_life_feed"
-  feed_url: "https://veganfortheanimals.github.io/veganfortheanimals/vegan_life_feed.xml"
+  feed_url: "https://veganfortheanimals.github.io/vegan_life_feed/feed.xml"
   max_items: 150
   max_age_days: 21
   include_keywords:
@@ -85,13 +85,13 @@ sources:
   - name: Men's Journal
     google_news: "site:mensjournal.com vegan OR plant-based"
     mode: keyword
-  - name: News: vegan menswear
+  - name: "News: vegan menswear"
     google_news: "vegan menswear OR \"vegan leather\" men OR cruelty-free menswear"
     mode: keyword
-  - name: News: vegan athletes
+  - name: "News: vegan athletes"
     google_news: "vegan athlete OR plant-based athlete OR vegan bodybuilder OR vegan strongman"
     mode: keyword
-  - name: News: men's grooming
+  - name: "News: men's grooming"
     google_news: "vegan men's grooming OR cruelty-free men's skincare"
     mode: keyword
 
