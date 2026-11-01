@@ -8,8 +8,8 @@ settings:
   title: "Ethical Man: Curated"
   description: "Vegan and ethics-minded men's lifestyle, fitness, style and gear, collected automatically."
   # After you create the repo, fill these in (replace USER and REPO):
-  site_url: "https://github.com/USER/REPO"
-  feed_url: "https://USER.github.io/REPO/feed.xml"
+  site_url: "https://github.com/veganfortheanimals/vegan_life_feed"
+  feed_url: "https://veganfortheanimals.github.io/REPO/vegan_life_feed.xml"
   max_items: 150
   max_age_days: 21
   include_keywords:
